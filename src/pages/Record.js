@@ -119,14 +119,14 @@ export default function Record() {
                       class="btn btn-secondary"
                       data-bs-toggle="modal"
                       data-bs-target="#exampleModal"
-                      style={{ float: "right" }}
+                      style={{ float: "left" }}
                     >
                       New Record
                     </button>
                   </div>
 
                   <table class="table caption-top table-hover table-responsive">
-                    <caption className="text-left">
+                    <caption className="text-center">
                       <strong className="title">
                         List of Records({Records.length})
                       </strong>
@@ -151,7 +151,19 @@ export default function Record() {
                           <td>
                             {domain.ResourceRecords.map((e, index) => (
                               <span key={index}>
-                                {e.Value} <b>|</b>{" "}
+                                {e.Value}{" "}
+                                <b
+                                  style={{
+                                    color: "Highlight",
+                                    visibility: `${
+                                      index + 1 == domain.ResourceRecords.length
+                                        ? "hidden"
+                                        : "visible"
+                                    }`,
+                                  }}
+                                >
+                                  |
+                                </b>{" "}
                               </span>
                             ))}
                           </td>

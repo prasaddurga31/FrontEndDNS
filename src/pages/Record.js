@@ -155,10 +155,12 @@ export default function Record() {
           <>
             <Navbar />
             <div className="bg-dark text-light p-3 pt-1 pb-1  m-3 rounded">
-              <strong className="m-3">List of Records ({Records.length})</strong>
+              <strong className="m-3">
+                List of Records ({Records.length})
+              </strong>
               <button
                 type="button"
-                class="btn btn-success m-3 mb-0"
+                class="btn btn-success m-3"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >
@@ -199,18 +201,22 @@ export default function Record() {
                             </td>
                             <td>{domain.Type}</td>
                             <td>{domain.TTL}</td>
-                            <td>
-                              {domain.ResourceRecords.map((e, index) => (
-                                <span key={index}  style={{
-                                    border: "1px solid lightgrey",
-                                    padding: "2px 4px 2px 4px ",
-                                    margin: "2px 4px 2px 4px",
-                                    borderRadius: "5px",
-                                  }}>
-                                  {e.Value}{" "}
-
-                                </span>
-                              ))}
+                            <td style={{ width: "max-content" }}>
+                              <>
+                                {domain.ResourceRecords.map((e, index) => (
+                                  <li
+                                    key={index}
+                                    style={{
+                                      margin: "2px 0px 2px 0px",
+                                      width: "fit-content",
+                                      listStyleType: "none",
+                                      listStylePosition: "outside",
+                                    }}
+                                  >
+                                    {e.Value}{" "}
+                                  </li>
+                                ))}
+                              </>
                             </td>
                             <td>
                               <button

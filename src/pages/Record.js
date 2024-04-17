@@ -155,10 +155,10 @@ export default function Record() {
           <>
             <Navbar />
             <div className="bg-dark text-light p-3 pt-1 pb-1  m-3 rounded">
-              <strong>List of Records ({Records.length})</strong>
+              <strong className="m-3">List of Records ({Records.length})</strong>
               <button
                 type="button"
-                class="btn btn-success m-3"
+                class="btn btn-success m-3 mb-0"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
               >

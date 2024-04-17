@@ -101,13 +101,13 @@ export default function Home() {
                       fontWeight: "bold",
                     }}
                   >
-                    Craeted Hosted Zones: {userDomains.length}
+                    Hoisted Zones: {userDomains.length}
                   </p>
                 </div>
                 <div className="col-md-6 text-md-end">
                   <Link to="/new-domain" className="nav-link">
                     <button className="btn btn-success">
-                      Create Another Hosited Zone
+                      Create Hoisted Zone
                     </button>
                   </Link>
                 </div>
@@ -125,7 +125,7 @@ export default function Home() {
                 <img src={empty} className="empty-img" alt="No domains found" />
                 <p>No Hoisted Zones to display</p>
                 <Link to="/new-domain" className="nav-link">
-                  <button className="btn btn-dark">Create Hosited Zone</button>
+                  <button className="btn btn-dark">Create Hoisted Zone</button>
                 </Link>
               </div>
             ) : (
@@ -139,8 +139,8 @@ export default function Home() {
                       <th scope="col">#</th>
                       <th scope="col">Domain Name</th>
                       <th scope="col">Domain Type</th>
-                      <th scope="col">Records Exists</th>
-                      <th scope="col">Hosited Zone ID</th>
+                      <th scope="col">Records</th>
+                      <th scope="col">Hoisted Zone ID</th>
                       <th scope="col"></th>
                     </tr>
                   </thead>

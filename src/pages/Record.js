@@ -201,22 +201,22 @@ export default function Record() {
                             <td>{domain.TTL}</td>
                             <td>
                               {domain.ResourceRecords.map((e, index) => (
-                                <span key={index}>
+                                <span key={index} style={{border:"1px solid lightgrey",padding:"2px",margin:"2px"}}>
                                   {e.Value}{" "}
-                                  <b
-                                    style={{
-                                      color: "Highlight",
-                                      visibility: `${
-                                        index + 1 ==
-                                        domain.ResourceRecords.length
-                                          ? "hidden"
-                                          : "visible"
-                                      }`,
-                                    }}
-                                  >
-                                    |
-                                  </b>{" "}
-                                </span>
+                                //   <b
+                                //     style={{
+                                //       color: "Highlight",
+                                //       visibility: `${
+                                //         index + 1 ==
+                                //         domain.ResourceRecords.length
+                                //           ? "hidden"
+                                //           : "visible"
+                                //       }`,
+                                //     }}
+                                //   >
+                                //     |
+                                //   </b>{" "}
+                                // </span>
                               ))}
                             </td>
                             <td>

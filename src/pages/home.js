@@ -22,7 +22,7 @@ export default function Home() {
       const token = localStorage.getItem("token");
       const email = localStorage.getItem("email");
       const response = await axios.get(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns?token=${token}&userId=${email}`
+        `https://backenddns.onrender.com/DNS/dns?token=${token}&userId=${email}`
       );
       console.log(response.data);
       setUserDomains(response.data);
@@ -49,7 +49,7 @@ export default function Home() {
     setError(null);
     try {
       const response = await axios.delete(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns?token=${token}&user=${user}&hostedZoneId=${Id}&`
+        `https://backenddns.onrender.com/DNS/dns?token=${token}&user=${user}&hostedZoneId=${Id}&`
       );
 
       await fetchData();

@@ -24,7 +24,7 @@ export default function SignUp() {
     e.preventDefault();
     setLoading(true); // Start loading
     axios
-      .post("https://zany-lime-piranha-shoe.cyclic.app/user/signup", userData)
+      .post("https://backenddns.onrender.com/user/signup", userData)
       .then((response) => {
         if (response.data.existed) {
           alert("Account already exists");

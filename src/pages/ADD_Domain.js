@@ -28,7 +28,7 @@ export default function ADD_Domain() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns?token=${token}`,
+        `https://backenddns.onrender.com/DNS/dns?token=${token}`,
         {
           ...domainInfo,
           token: localStorage.getItem("token") || "",

@@ -34,7 +34,7 @@ export default function Record() {
       console.log(formData);
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns/ui?token=${token}`,
+        `https://backenddns.onrender.com/DNS/dns/ui?token=${token}`,
         {
           ...formData,
           hostedZoneId: id,
@@ -60,7 +60,7 @@ export default function Record() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns/records?token=${token}&hostedZoneId=${id}`
+        `https://backenddns.onrender.com/DNS/dns/records?token=${token}&hostedZoneId=${id}`
       );
       setRecords([...response.data]);
     } catch (error) {
@@ -88,7 +88,7 @@ export default function Record() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns/json?token=${token}`,
+        `https://backenddns.onrender.com/DNS/dns/json?token=${token}`,
         formData,
         {
           headers: {
@@ -111,7 +111,7 @@ export default function Record() {
     const token = localStorage.getItem("token");
     try {
       await axios.delete(
-        `https://zany-lime-piranha-shoe.cyclic.app/DNS/dns/record?token=${token}&recordName=${domain.Name}&recordType=${domain.Type}&hostedZoneId=${id}&`,
+        `https://backenddns.onrender.com/DNS/dns/record?token=${token}&recordName=${domain.Name}&recordType=${domain.Type}&hostedZoneId=${id}&`,
         { data: domain }
       );
       await fetchData();
